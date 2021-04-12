@@ -40,8 +40,11 @@ while(page<=totalPages):
         availability = stockPath(row)[0].strip()
         image = imagePath(row)[0]
         rating = starRating(row)[0]
-    
+        print("*** Ready to append")
+        print(dataSet) 
         dataSet.append([title,price,availability,image.replace('../../../..',baseUrl),rating.replace('star-rating ','')])
+        print("*** appended")
+        print(dataSet) 
 
     page+=1
 
