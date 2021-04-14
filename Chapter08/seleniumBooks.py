@@ -1,8 +1,14 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
-chrome_path = 'chromedriver'
-driver = webdriver.Chrome(executable_path=chrome_path)
+#chrome_path = 'chromedriver'
+#driver = webdriver.Chrome(executable_path=chrome_path)
+#driver.get('http://books.toscrape.com/index.html')
+
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get('http://books.toscrape.com/index.html')
 
 dataSet = []
